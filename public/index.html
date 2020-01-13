@@ -4,8 +4,27 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>mtxsp</title>
+    <title>乐乐侠</title>
+    <script src="js/jquery-1.11.3.js"></script>
+    <style>
+    .bole-tab-up .van-popup__close-icon--bottom-left{
+      left: 50%;margin-left: -9px;
+    }
+    img:not(.noimg){width: 100%;height: 100%;}
+    .mint-indicator-wrapper{z-index: 1;}
+    .v-j .van-slider__button{
+      width: 12px;height: 12px;
+    }
+    .van-tab--active{
+      font-size: 16px;
+    }
+    .active-fixed .van-tabs__wrap{
+      position: fixed;
+      top: 40px;
+      width: 100%;
+      z-index: 100;
+    }
+    </style>
   </head>
   <body>
     <noscript>
@@ -13,5 +32,23 @@
     </noscript>
     <div id="app"></div>
     <!-- built files will be auto injected -->
+    <script>
+      var quickSort = function(arr) {
+          if (arr.length <= 1) { return arr; };//检测数组是否为空
+          arr.sort(function(a,b){//js自带排序
+              return  a-b;
+          })
+          //数组去重
+          sarr={};
+          nArr=[]
+          for(var i = 0;i<arr.length;i++){
+            if(!sarr[arr[i]]){
+              sarr[arr[i]]='a'
+              nArr.push(arr[i])
+            }
+          }
+      　　return nArr;
+      };
+    </script>
   </body>
 </html>
